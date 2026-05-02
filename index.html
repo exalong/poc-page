@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Startup One-Pager | Maritime Finance & ESG</title>
+  <style>
+    :root {
+      --ink: #2d2c59;
+      --muted: #3f3d64;
+      --paper: #ffffff;
+      --line: #e9e8ef;
+      --soft: #f7f6f3;
+      --accent: #292957;
+      --max-width: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f1f1f4;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.28;
+    }
+
+    .page {
+      width: min(var(--max-width), 100%);
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--paper);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.14);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 13px 20px 12px;
+      font-size: clamp(1rem, 2.4vw, 1.42rem);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    main {
+      padding: clamp(22px, 4vw, 42px) clamp(22px, 4.4vw, 46px) 22px;
+      flex: 1;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    .hero h1 {
+      font-size: clamp(1.55rem, 3.3vw, 2.05rem);
+      line-height: 1.02;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .subtitle {
+      margin-top: 3px;
+      max-width: 920px;
+      color: var(--muted);
+      font-size: clamp(0.94rem, 1.8vw, 1.06rem);
+      font-style: italic;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(18px, 3.2vw, 34px);
+      margin-top: 8px;
+    }
+
+    .card h2,
+    .section h2 {
+      font-size: clamp(1.22rem, 2.55vw, 1.62rem);
+      line-height: 1.04;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .card p,
+    .section p,
+    .section li,
+    .footer {
+      font-size: clamp(0.91rem, 1.75vw, 1.05rem);
+      color: var(--muted);
+    }
+
+    .visual-wrap {
+      margin: clamp(14px, 2.6vw, 24px) auto clamp(16px, 2.7vw, 24px);
+      max-width: 630px;
+      width: 88%;
+    }
+
+    .platform-diagram {
+      width: 100%;
+      aspect-ratio: 1.58 / 1;
+      display: block;
+    }
+
+    .diagram-label {
+      fill: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .diagram-small {
+      fill: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .mid-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(18px, 3.2vw, 34px);
+      margin-top: 4px;
+    }
+
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.18fr;
+      gap: clamp(28px, 7vw, 84px);
+      margin-top: clamp(28px, 5vw, 48px);
+      align-items: start;
+    }
+
+    .section strong { font-weight: 800; color: var(--ink); }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 2px 0 0;
+    }
+
+    .footer-bar {
+      height: 14px;
+      background: var(--accent);
+      margin-top: auto;
+    }
+
+    .footer {
+      padding: 4px clamp(22px, 4.4vw, 46px) 12px;
+      font-size: 0.72rem;
+      color: var(--ink);
+    }
+
+    @media (max-width: 780px) {
+      .three-col,
+      .mid-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .visual-wrap {
+        width: 100%;
+        margin-block: 22px;
+      }
+
+      .card,
+      .section {
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .three-col .card:first-child { border-top: 0; padding-top: 0; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; width: 100%; min-height: 100vh; }
+      main { padding: 26px 38px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="topbar">Startup One-Pager</header>
+
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <h1 id="title">Maritime Finance &amp; ESG</h1>
+        <p class="subtitle">A carbon cost optimization platform for shipping that helps fleets manage EU ETS exposure, allocate responsibility across stakeholders, and execute carbon purchasing more efficiently.</p>
+      </section>
+
+      <section class="three-col" aria-label="Problem, solution and timing">
+        <div class="card">
+          <h2>1 Problem</h2>
+          <p>Shipping companies face a new financial burden under EU ETS. Today, carbon exposure is often managed through spreadsheets, fragmented operational data, and manual coordination between shipowners, charterers, and brokers.</p>
+        </div>
+        <div class="card">
+          <h2>2 Solution</h2>
+          <p>We provide a platform that turns emissions-related compliance into a controllable financial workflow. It tracks vessel-level exposure, supports carbon purchase decisions, and makes role allocation between owner and charterer clearer and easier to execute.</p>
+        </div>
+        <div class="card">
+          <h2>3 Why now</h2>
+          <p>EU shipping compliance is already becoming operationally and financially material. The market needs software that sits between operations, finance, and carbon execution - not another spreadsheet workflow.</p>
+        </div>
+      </section>
+
+      <section class="visual-wrap" aria-label="Platform ecosystem diagram">
+        <img src="diagram.png" alt="Software platform connected to carbon market, shipowner, broker and charterer" style="width:100%; height:auto; display:block;" />
+      </section>
+
+      <section class="mid-grid" aria-label="Business model, status and vision">
+        <div class="section">
+          <h2>Business model</h2>
+          <p>Subscription per vessel, plus transaction-based revenue on carbon-related execution and optional premium automation modules.</p>
+        </div>
+        <div class="section">
+          <h2>Status</h2>
+          <p>Architecture defined, MVP in development, stakeholder discussions initiated, and external data integrations planned.</p>
+        </div>
+        <div class="section">
+          <h2>Vision</h2>
+          <p>Become the operating layer for carbon compliance and carbon-linked financial workflows in shipping. We build a platform as service for shipowner to join our <strong>cloud or on premises</strong></p>
+        </div>
+      </section>
+
+      <section class="bottom-grid" aria-label="Users and carbon cost optimization">
+        <div class="section">
+          <h2>Who it serves</h2>
+          <p><strong>Primary users:</strong> Shipowners, charterers, ship managers, maritime finance teams.</p>
+          <p><strong>Core value:</strong> Better cost control, clearer accountability, and more structured carbon purchasing.</p>
+        </div>
+        <div class="section">
+          <h2>Carbon Cost Optimization</h2>
+          <ul class="clean">
+            <li>- Visibility of ETS exposure per vessel and fleet</li>
+            <li>- Structured carbon purchasing workflow</li>
+            <li>- Reduced compliance and contract risk</li>
+            <li>- Improved financial planning for shipowners</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer-bar" aria-hidden="true"></div>
+    <footer class="footer">
+      Company: Exalong, +306937188566<br />
+      email: info@exalong.com , Confidential
+    </footer>
+  </article>
+</body>
+</html>
